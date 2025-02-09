@@ -11,7 +11,7 @@ const ForgotPassword = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:5000/api/auth/forgot-password', { email });
+      const response = await axios.post('https://todo-app-backend-neon-phi.vercel.app/api/auth/forgot-password', { email });
       setMessage(response.data.message);
     } catch (err) {
       setMessage(err.response?.data?.message || 'Error sending reset email');

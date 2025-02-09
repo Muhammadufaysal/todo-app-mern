@@ -13,7 +13,7 @@ const Register = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:5000/api/auth/register', {
+      const response = await axios.post('https://todo-app-backend-neon-phi.vercel.app/api/auth/register', {
         email,
         password,
       });
@@ -99,7 +99,7 @@ export default Register;
 //   const handleSubmit = async (e) => {
 //     e.preventDefault();
 //     try {
-//       const response = await axios.post('http://localhost:5000/api/auth/register', {
+//       const response = await axios.post('https://todo-app-backend-neon-phi.vercel.app/api/auth/register', {
 //         email,
 //         password,
 //       });
@@ -194,7 +194,7 @@ export default Register;
 //   const handleSubmit = async (e) => {
 //     e.preventDefault();
 //     try {
-//       const response = await axios.post('http://localhost:5000/api/auth/register', {
+//       const response = await axios.post('https://todo-app-backend-neon-phi.vercel.app/api/auth/register', {
 //         email,
 //         password,
 //       });
@@ -279,7 +279,7 @@ export default Register;
 //   const handleSubmit = async (e) => {
 //     e.preventDefault();
 //     try {
-//       const response = await axios.post('http://localhost:5000/api/auth/register', {
+//       const response = await axios.post('https://todo-app-backend-neon-phi.vercel.app/api/auth/register', {
 //         email,
 //         password,
 //       });

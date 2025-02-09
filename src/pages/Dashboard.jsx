@@ -14,7 +14,7 @@ const Dashboard = () => {
   const fetchTodos = async () => {
     try {
       const token = localStorage.getItem('token');
-      const response = await axios.get('http://localhost:5000/api/todo/', {
+      const response = await axios.get('https://todo-app-backend-neon-phi.vercel.app/api/todo/', {
         headers: { Authorization: `Bearer ${token}` },
       });
       setTodos(response.data);
@@ -29,7 +29,7 @@ const Dashboard = () => {
       try {
         const token = localStorage.getItem('token');
         const response = await axios.post(
-          'http://localhost:5000/api/todo/',
+          'https://todo-app-backend-neon-phi.vercel.app/api/todo/',
           { title: newTodo },
           { headers: { Authorization: `Bearer ${token}` } }
         );
@@ -46,7 +46,7 @@ const Dashboard = () => {
   const handleDeleteTodo = async (id) => {
     try {
       const token = localStorage.getItem('token');
-      await axios.delete(`http://localhost:5000/api/todo/${id}`, {
+      await axios.delete(`https://todo-app-backend-neon-phi.vercel.app/api/todo/${id}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       setTodos(todos.filter((todo) => todo._id !== id)); // Remove the deleted todo from the list
@@ -61,7 +61,7 @@ const Dashboard = () => {
     try {
       const token = localStorage.getItem('token');
       const response = await axios.put(
-        `http://localhost:5000/api/todo/${id}`,
+        `https://todo-app-backend-neon-phi.vercel.app/api/todo/${id}`,
         { completed: !completed },
         { headers: { Authorization: `Bearer ${token}` } }
       );
@@ -189,7 +189,7 @@ export default Dashboard;
 //   const fetchTodos = async () => {
 //     try {
 //       const token = localStorage.getItem('token');
-//       const response = await axios.get('http://localhost:5000/api/todos', {
+//       const response = await axios.get('https://todo-app-backend-neon-phi.vercel.app/api/todos', {
 //         headers: { Authorization: `Bearer ${token}` },
 //       });
 //       setTodos(response.data);
@@ -204,7 +204,7 @@ export default Dashboard;
 //       try {
 //         const token = localStorage.getItem('token');
 //         const response = await axios.post(
-//           'http://localhost:5000/api/todos',
+//           'https://todo-app-backend-neon-phi.vercel.app/api/todos',
 //           { title: newTodo },
 //           { headers: { Authorization: `Bearer ${token}` } }
 //         );
@@ -221,7 +221,7 @@ export default Dashboard;
 //   const handleDeleteTodo = async (id) => {
 //     try {
 //       const token = localStorage.getItem('token');
-//       await axios.delete(`http://localhost:5000/api/todos/${id}`, {
+//       await axios.delete(`https://todo-app-backend-neon-phi.vercel.app/api/todos/${id}`, {
 //         headers: { Authorization: `Bearer ${token}` },
 //       });
 //       setTodos(todos.filter((todo) => todo._id !== id));
@@ -236,7 +236,7 @@ export default Dashboard;
 //     try {
 //       const token = localStorage.getItem('token');
 //       const response = await axios.put(
-//         `http://localhost:5000/api/todos/${id}`,
+//         `https://todo-app-backend-neon-phi.vercel.app/api/todos/${id}`,
 //         { completed: !completed },
 //         { headers: { Authorization: `Bearer ${token}` } }
 //       );
